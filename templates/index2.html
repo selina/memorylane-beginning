@@ -50,7 +50,32 @@ function codeAddress() {
   });
 }
 
+function initialize() {
+  var new york = new google.maps.LatLng(-74.0059,40.7127);
 
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: new york,
+      zoom: 15
+    });
+
+  var request = {
+    location: new york,
+    radius: '500',
+    query: 'Marker'
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.textSearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      <h1>Highlighting a Marker</h1>(results[i]);
+    }
+  }
+}
 
 </script>
 </body>
