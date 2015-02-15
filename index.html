@@ -21,5 +21,64 @@
   </head>
   <body>
 <div id="map-canvas"></div>
+
+<form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
+<textarea name="myTextBox" cols="50" rows="5">
+Enter some text...
+</textarea>
+<br />
+<input type="submit" />
+</form>
+
+<print.myTextBox "Enter Adress" 
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "502",
+               "short_name" : "502",
+               "types" : [ "street_number" ]
+            }
+              {
+               "long_name" : "West 170 Street",
+               "short_name" : "W 170 St",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "New York",
+               "short_name" : "NY",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "10032",
+               "short_name" : "10032",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "502 W 170 St NY, NY 10032, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 40.841007,
+               "lng" : -73.936549 
+            },
+               },
+               "southwest" : {
+                  "lat" : 37.42156911970850,
+                  "lng" : -122.0867701802915
+               }
+            }
+         },
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+
   </body>
 </html>
